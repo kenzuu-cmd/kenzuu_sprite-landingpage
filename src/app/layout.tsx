@@ -5,8 +5,18 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { Toaster } from '@/components/ui/toaster'
 
 export const metadata: Metadata = {
-  title: 'Sprite Scroll',
+  title: 'Sprite – Landing Page',
   description: 'A cinematic, scroll-controlled website for Sprite.',
+  icons: {
+    icon: [
+      {
+        url: '/assets/sprite-favico.svg',
+        type: 'image/svg+xml',
+      },
+    ],
+    shortcut: '/assets/sprite-favico.svg',
+    apple: '/assets/sprite-favico.svg',
+  },
 }
 
 export default function RootLayout({
