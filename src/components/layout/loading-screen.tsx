@@ -9,17 +9,17 @@ interface LoadingScreenProps {
 
 export function LoadingScreen({ progress }: LoadingScreenProps) {
   return (
-    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-background transition-opacity duration-500">
-      <div className="flex flex-col items-center justify-center space-y-6">
+    <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-sprite-green transition-opacity duration-500">
+      <div className="flex flex-col items-center justify-center space-y-8">
         <SpriteLogo
           width={473}
           height={347}
-          className="w-32"
+          className="w-40"
           style={{ marginBottom: '24px' }}
         />
         <div className="w-64">
-          <Progress value={progress} className="h-2" />
-          <p className="text-center text-sm text-muted-foreground mt-4">
+          <Progress value={progress} className="h-2 bg-white/30" />
+          <p className="text-center text-base text-white font-semibold mt-6">
             Loading {Math.round(progress)}%
           </p>
         </div>

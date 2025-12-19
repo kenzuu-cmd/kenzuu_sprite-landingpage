@@ -26,7 +26,7 @@ export const defaultConfig: SiteConfig = {
       'Crisp, clean, and instantly refreshing — a sharp burst of lemon and lime with zero heaviness.',
   },
   theme: {
-    color: '#00AE5F',
+    color: '#00C850',
   },
 }
 

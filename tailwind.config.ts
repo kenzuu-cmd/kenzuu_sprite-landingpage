@@ -23,10 +23,10 @@ export default {
       },
       colors: {
         sprite: {
-          green: '#00D664',
-          'green-light': '#1AFF7A',
-          'green-dark': '#00B854',
-          'green-glow': 'rgba(0, 214, 100, 0.3)',
+          green: '#00C850',
+          'green-light': '#10E060',
+          'green-dark': '#00A040',
+          'green-glow': 'rgba(0, 200, 80, 0.2)',
           yellow: '#FFD700',
           'yellow-light': '#FFED4E',
         },

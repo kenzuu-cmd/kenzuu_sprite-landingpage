@@ -36,14 +36,12 @@ export default function PageClient() {
       <Header />
       <main>
         <HeroSection drinkConfig={defaultConfig.drink} />
-        <div className="relative z-10 bg-background">
-          <AboutSection />
-          <IngredientsSection />
-          <NutritionSection />
-          <ReviewsSection />
-          <FaqSection />
-          <FinalCtaSection />
-        </div>
+        <AboutSection />
+        <IngredientsSection />
+        <NutritionSection />
+        <ReviewsSection />
+        <FaqSection />
+        <FinalCtaSection />
       </main>
       <Footer />
     </>

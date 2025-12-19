@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import { SpriteLogo } from '@/components/icons/sprite-logo'
 import { Button } from '@/components/ui/button'
 import { useActiveSection } from '@/hooks/use-active-section'
 import { cn } from '@/lib/utils'
@@ -25,34 +24,32 @@ export function Header() {
     <header
       className={cn(
         'fixed top-0 left-0 right-0 z-40 transition-all duration-300',
-        isScrolled
-          ? 'bg-background/95 backdrop-blur-xl shadow-lg shadow-sprite-green/10'
-          : 'bg-background/60 backdrop-blur-sm'
+        isScrolled ? 'bg-white shadow-md' : 'bg-white/95'
       )}
     >
-      <div className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container mx-auto flex h-20 items-center justify-between px-6 sm:px-8 lg:px-12">
         <Link
           href="/"
           aria-label="Home"
           className="flex items-center mr-8 group"
         >
-          <SpriteLogo
-            width={473}
-            height={347}
-            className="h-8 max-w-[80px] transition-all duration-300 group-hover:scale-110 group-hover:drop-shadow-[0_0_10px_rgba(0,214,100,0.5)]"
+          <img
+            src="/assets/sprite-logo2.png"
+            alt="Sprite logo"
+            className="navbar-logo h-8 w-auto transition-all duration-300 group-hover:scale-105"
           />
         </Link>
-        <nav className="hidden items-center space-x-1 md:flex">
+        <nav className="hidden items-center space-x-2 md:flex">
           {navLinks.map((link) => (
             <Button
               key={link.id}
               variant="ghost"
               asChild
               className={cn(
-                'font-semibold transition-all duration-300 relative overflow-hidden',
+                'font-semibold transition-all duration-300 relative px-4 py-2 rounded-lg',
                 activeSection === link.id
-                  ? 'text-sprite-green hover:text-sprite-green-light after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-sprite-green'
-                  : 'text-foreground/70 hover:text-sprite-green'
+                  ? 'bg-sprite-green text-white hover:bg-sprite-green-dark'
+                  : 'text-sprite-green hover:bg-sprite-green/10'
               )}
             >
               <a href={`#${link.id}`}>{link.name}</a>

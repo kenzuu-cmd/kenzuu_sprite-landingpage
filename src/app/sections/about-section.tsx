@@ -9,36 +9,32 @@ export function AboutSection() {
   const aboutImage = PlaceHolderImages.find((p) => p.id === 'about-image')
 
   return (
-    <section
-      id="product"
-      className="py-24 sm:py-32 bg-gradient-to-b from-background to-secondary/30"
-    >
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+    <section id="product" className="py-32 sm:py-40 bg-white">
+      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <motion.div
-            className="space-y-8"
-            initial={{ opacity: 0, x: -50 }}
+            className="space-y-10"
+            initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.8 }}
+            transition={{ duration: 0.6 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-5xl sm:text-6xl font-black tracking-tighter">
-              <span className="text-sprite-green">Crisp.</span>{' '}
-              <span className="text-sprite-green-light">Clean.</span>{' '}
-              <span className="text-white">Refreshing.</span>
+            <h2 className="text-5xl sm:text-6xl font-black tracking-tighter text-sprite-green-dark leading-tight">
+              Crisp. Clean.{' '}
+              <span className="text-sprite-green">Refreshing.</span>
             </h2>
-            <p className="text-xl text-foreground/80 leading-relaxed">
+            <p className="text-xl text-gray-700 leading-relaxed">
               Sprite is the iconic lemon-lime soda that has been quenching
               thirsts for decades. Its signature sharp, citrusy taste provides
               an instant{' '}
-              <span className="text-sprite-green font-semibold">
+              <span className="text-sprite-green font-bold">
                 burst of refreshment
               </span>{' '}
               without any of the heaviness.
             </p>
-            <p className="text-xl text-foreground/80 leading-relaxed">
+            <p className="text-xl text-gray-700 leading-relaxed">
               Made with{' '}
-              <span className="text-sprite-green-light font-semibold">
+              <span className="text-sprite-green font-bold">
                 100% natural flavors
               </span>
               , every sip of Sprite is a moment of pure, clean enjoyment. It's
@@ -46,26 +42,27 @@ export function AboutSection() {
               pick-me-up on its own.
             </p>
             <motion.div
-              className="inline-block px-6 py-3 glass-effect rounded-full border-2 border-sprite-green/30"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-sprite-green/15 rounded-lg border-2 border-sprite-green/40 shadow-sm"
               whileHover={{
-                scale: 1.05,
-                borderColor: 'rgba(0, 214, 100, 0.8)',
+                scale: 1.03,
+                borderColor: 'rgba(0, 200, 80, 0.7)',
+                boxShadow: '0 4px 12px rgba(0, 200, 80, 0.2)',
               }}
-              transition={{ duration: 0.3 }}
+              transition={{ duration: 0.2 }}
             >
-              <span className="text-sprite-green font-bold text-lg">
+              <span className="text-sprite-green-dark font-bold text-xl">
                 ✓ 100% Natural Flavors
               </span>
             </motion.div>
           </motion.div>
           {aboutImage && (
             <motion.div
-              initial={{ opacity: 0, x: 50 }}
+              initial={{ opacity: 0, x: 30 }}
               whileInView={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8 }}
+              transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
-              <Card className="overflow-hidden shadow-2xl border-2 border-sprite-green/20 hover:border-sprite-green/50 transition-all duration-500 hover:shadow-[0_0_50px_rgba(0,214,100,0.3)]">
+              <Card className="overflow-hidden shadow-lg border border-gray-200 hover:shadow-xl transition-all duration-300">
                 <CardContent className="p-0">
                   <Image
                     src={aboutImage.imageUrl}

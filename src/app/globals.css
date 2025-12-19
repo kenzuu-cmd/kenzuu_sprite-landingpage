@@ -4,7 +4,7 @@
 
 html {
   scroll-behavior: smooth;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 body {
@@ -12,6 +12,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   letter-spacing: -0.01em;
+  background: #00c850;
 }
 
 h1,
@@ -28,30 +29,30 @@ h6 {
 
 @layer base {
   :root {
-    --background: 0 0% 8%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 12%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 12%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 150 100% 42%;
-    --primary-foreground: 0 0% 5%;
-    --secondary: 0 0% 16%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 18%;
-    --muted-foreground: 0 0% 65%;
-    --accent: 150 100% 42%;
-    --accent-foreground: 0 0% 5%;
+    --background: 145 100% 39%;
+    --foreground: 0 0% 100%;
+    --card: 0 0% 100%;
+    --card-foreground: 145 100% 20%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 145 100% 20%;
+    --primary: 145 100% 39%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 0 0% 98%;
+    --secondary-foreground: 145 100% 20%;
+    --muted: 0 0% 96%;
+    --muted-foreground: 145 100% 20%;
+    --accent: 145 100% 39%;
+    --accent-foreground: 0 0% 100%;
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 22%;
-    --input: 0 0% 22%;
-    --ring: 150 100% 42%;
-    --chart-1: 220 70% 50%;
-    --chart-2: 160 60% 45%;
-    --chart-3: 30 80% 55%;
-    --chart-4: 280 65% 60%;
-    --chart-5: 340 75% 55%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 145 30% 85%;
+    --input: 0 0% 96%;
+    --ring: 145 100% 39%;
+    --chart-1: 145 100% 39%;
+    --chart-2: 145 80% 50%;
+    --chart-3: 145 60% 60%;
+    --chart-4: 145 40% 70%;
+    --chart-5: 145 20% 80%;
     --radius: 0.75rem;
   }
 }
@@ -70,15 +71,75 @@ h6 {
     text-wrap: balance;
   }
 
-  .glass-effect {
-    @apply backdrop-blur-xl bg-white/5 border border-white/10;
+  .white-card {
+    @apply bg-white border border-gray-100 shadow-sm;
   }
 
   .sprite-glow {
-    text-shadow: 0 0 30px rgba(0, 214, 100, 0.5);
+    text-shadow: 0 0 20px rgba(0, 200, 80, 0.3);
   }
 
   .sprite-border {
-    border-color: #00d664;
+    border-color: #00c850;
+  }
+
+  /* Logo styling for header and footer */
+  .navbar-logo {
+    height: 32px;
+    width: auto;
+    display: block;
+    max-width: 120px;
+    object-fit: contain;
+  }
+
+  .footer-logo {
+    height: 26px;
+    width: auto;
+    display: block;
+    max-width: 100px;
+    object-fit: contain;
+  }
+
+  /* Footer social icons - perfectly centered */
+  .footer-socials {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    margin: 0;
+  }
+
+  .footer-icon-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .footer-icon {
+    width: 28px;
+    height: 28px;
+    display: block;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .navbar-logo {
+      height: 28px;
+      max-width: 100px;
+    }
+
+    .footer-logo {
+      height: 22px;
+      max-width: 80px;
+    }
+
+    .footer-socials {
+      gap: 24px;
+    }
+
+    .footer-icon {
+      width: 24px;
+      height: 24px;
+    }
   }
 }
