@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { CheckCircle2 } from 'lucide-react'
+import Image from 'next/image'
 
 const ingredients = [
   'Carbonated Water',
@@ -20,8 +21,29 @@ const highlights = [
 
 export function IngredientsSection() {
   return (
-    <section id="ingredients" className="py-32 sm:py-40 bg-sprite-green">
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12">
+    <section
+      id="ingredients"
+      className="relative py-32 sm:py-40 bg-sprite-green overflow-hidden"
+    >
+      {/* Decorative background image - full cover */}
+      <div
+        className="absolute inset-0 pointer-events-none select-none"
+        style={{ zIndex: 1 }}
+      >
+        <Image
+          src="/assets/sprite-hand-left.png"
+          alt=""
+          fill
+          className="object-cover"
+          style={{ opacity: 0.25 }}
+          aria-hidden="true"
+        />
+      </div>
+
+      <div
+        className="container mx-auto px-6 sm:px-8 lg:px-12 relative"
+        style={{ zIndex: 10 }}
+      >
         <motion.div
           className="max-w-3xl mx-auto text-center"
           initial={{ opacity: 0, y: 20 }}

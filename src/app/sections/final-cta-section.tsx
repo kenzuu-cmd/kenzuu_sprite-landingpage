@@ -18,7 +18,7 @@ export function FinalCtaSection() {
           alt={bgImage.description}
           data-ai-hint={bgImage.imageHint}
           fill
-          className="object-cover z-0 opacity-10"
+          className="object-cover z-0 opacity-30"
         />
       )}
 

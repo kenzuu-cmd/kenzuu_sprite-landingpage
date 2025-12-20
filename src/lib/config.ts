@@ -23,7 +23,7 @@ export const defaultConfig: SiteConfig = {
     name: 'Sprite',
     subtitle: 'Lemon-Lime Soda',
     description:
-      'Crisp, clean, and instantly refreshing — a sharp burst of lemon and lime with zero heaviness.',
+      'Crisp, clean, and instantly refreshing!A sharp burst of lemon and lime with zero heaviness.',
   },
   theme: {
     color: '#00C850',

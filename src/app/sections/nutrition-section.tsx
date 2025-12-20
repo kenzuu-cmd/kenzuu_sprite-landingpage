@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Card, CardContent } from '@/components/ui/card'
 import { Badge } from '@/components/ui/badge'
+import Image from 'next/image'
 
 const FactRow = ({
   label,
@@ -27,8 +28,29 @@ const FactRow = ({
 
 export function NutritionSection() {
   return (
-    <section id="nutrition" className="py-32 sm:py-40 bg-sprite-green">
-      <div className="container mx-auto px-6 sm:px-8 lg:px-12 flex flex-col items-center">
+    <section
+      id="nutrition"
+      className="relative py-32 sm:py-40 bg-sprite-green overflow-hidden"
+    >
+      {/* Decorative background image - full cover */}
+      <div
+        className="absolute inset-0 pointer-events-none select-none"
+        style={{ zIndex: 1 }}
+      >
+        <Image
+          src="/assets/sprite-hand-right.png"
+          alt=""
+          fill
+          className="object-cover"
+          style={{ opacity: 0.25 }}
+          aria-hidden="true"
+        />
+      </div>
+
+      <div
+        className="container mx-auto px-6 sm:px-8 lg:px-12 flex flex-col items-center relative"
+        style={{ zIndex: 10 }}
+      >
         <motion.div
           className="max-w-3xl mx-auto text-center mb-20"
           initial={{ opacity: 0, y: 20 }}
