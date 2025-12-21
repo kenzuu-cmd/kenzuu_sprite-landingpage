@@ -1,13 +1,16 @@
+/** Product drink configuration */
 export interface DrinkConfig {
   name: string
   subtitle: string
   description: string
 }
 
+/** Theme color configuration */
 export interface ThemeConfig {
   color: string
 }
 
+/** Site-wide configuration settings */
 export interface SiteConfig {
   brandName: string
   brandDescription: string
@@ -23,7 +26,7 @@ export const defaultConfig: SiteConfig = {
     name: 'Sprite',
     subtitle: 'Lemon-Lime Soda',
     description:
-      'Crisp, clean, and instantly refreshing!A sharp burst of lemon and lime with zero heaviness.',
+      'Crisp, clean, and instantly refreshing! A sharp burst of lemon and lime with zero heaviness.',
   },
   theme: {
     color: '#00C850',

@@ -6,6 +6,10 @@ type ThemeProviderProps = {
   children: React.ReactNode
 }
 
+/**
+ * Provides theme context for the application.
+ * Currently sets and maintains dark mode styling.
+ */
 export function ThemeProvider({ children }: ThemeProviderProps) {
   React.useEffect(() => {
     const root = window.document.documentElement

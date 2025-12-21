@@ -6,6 +6,11 @@ interface SpriteLogoProps extends React.HTMLAttributes<HTMLDivElement> {
   height?: number
 }
 
+/**
+ * Sprite brand logo component with responsive sizing.
+ * @param width - Logo width in pixels (default: 473)
+ * @param height - Logo height in pixels (default: 347)
+ */
 export function SpriteLogo({
   className,
   width = 473,

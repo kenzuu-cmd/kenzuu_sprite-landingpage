@@ -15,7 +15,6 @@ export function Footer() {
     <footer className="bg-white text-sprite-green-dark border-t border-gray-200">
       <div className="container mx-auto py-16 px-6 sm:px-8 lg:px-12">
         <div className="flex flex-col items-center space-y-8">
-          {/* Logo */}
           <Link href="/" aria-label="Home" className="group">
             <img
               src="/assets/sprite-logo2.png"
@@ -24,7 +23,6 @@ export function Footer() {
             />
           </Link>
 
-          {/* Navigation Links */}
           <nav className="flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm">
             <Link
               href="#"
@@ -52,7 +50,6 @@ export function Footer() {
             </Link>
           </nav>
 
-          {/* Social Icons - Perfectly Centered */}
           <div className="footer-socials flex justify-center items-center gap-8">
             <motion.a
               href="https://x.com/sprite"
@@ -89,7 +86,6 @@ export function Footer() {
             </motion.a>
           </div>
 
-          {/* Copyright */}
           <p className="text-center text-sm text-gray-600">
             © {currentYear} The Coca-Cola Company. All rights reserved.
           </p>

@@ -32,7 +32,7 @@ export function NutritionSection() {
       id="nutrition"
       className="relative py-32 sm:py-40 bg-sprite-green overflow-hidden"
     >
-      {/* Decorative background image - full cover */}
+      {/* Background decoration */}
       <div
         className="absolute inset-0 pointer-events-none select-none"
         style={{ zIndex: 1 }}

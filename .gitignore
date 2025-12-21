@@ -45,10 +45,6 @@ lerna-debug.log*
 *.tsbuildinfo
 next-env.d.ts
 
-# firebase
-firebase-debug.log
-firestore-debug.log
-
 # IDEs
 .vscode/*
 !.vscode/settings.json

@@ -25,7 +25,7 @@ export function HeroSection({ drinkConfig }: HeroSectionProps) {
           className="absolute inset-0 h-full w-full object-cover opacity-40"
           aria-label="Sprite hero video animation"
         />
-        {/* Dark gradient overlay for text readability */}
+        {/* Gradient overlay for improved text contrast */}
         <div className="absolute inset-0 bg-gradient-to-r from-black/60 via-black/30 to-transparent" />
 
         <div className="absolute inset-0 flex items-center justify-start">

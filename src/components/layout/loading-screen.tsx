@@ -7,6 +7,10 @@ interface LoadingScreenProps {
   progress: number
 }
 
+/**
+ * Full-screen loading indicator with animated logo and progress bar.
+ * @param progress - Loading progress percentage (0-100)
+ */
 export function LoadingScreen({ progress }: LoadingScreenProps) {
   return (
     <div className="fixed inset-0 z-50 flex flex-col items-center justify-center bg-sprite-green transition-opacity duration-500">

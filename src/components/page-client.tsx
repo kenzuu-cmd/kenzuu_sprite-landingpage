@@ -13,16 +13,20 @@ import { ReviewsSection } from '@/app/sections/reviews-section'
 import { FaqSection } from '@/app/sections/faq-section'
 import { FinalCtaSection } from '@/app/sections/final-cta-section'
 
+/**
+ * Main client-side component that orchestrates the landing page.
+ * Manages loading state and renders all page sections in sequence.
+ */
 export default function PageClient() {
   const [isLoading, setIsLoading] = useState(true)
   const [progress, setProgress] = useState(0)
 
   useEffect(() => {
-    // When the component mounts, set a timeout to mark loading as complete.
+    // Simulate initial loading state with 500ms delay
     const timer = setTimeout(() => {
       setProgress(100)
       setIsLoading(false)
-    }, 500) // A small delay to allow the initial render to complete.
+    }, 500)
 
     return () => clearTimeout(timer)
   }, [])
